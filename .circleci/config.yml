@@ -26,6 +26,6 @@ jobs:
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker push ajris/site:$TAG
       - run: |
-          TAG=latest
           docker login -u $HEROKU_USER -p $HEROKU_PASS registry.heroku.com
-          docker push registry.heroku.com/ajris/site:latest/web
+          docker tag ajris/site:latest registry.heroku.com/ajris/web
+          docker push registry.heroku.com/ajris/web
