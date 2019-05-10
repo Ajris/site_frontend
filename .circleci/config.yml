@@ -29,3 +29,7 @@ jobs:
           docker login -u $HEROKU_USER -p $HEROKU_PASS registry.heroku.com
           docker tag ajris/site:latest registry.heroku.com/ajris/web
           docker push registry.heroku.com/ajris/web
+          curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+          heroku login $HEROKU_USER $HEROKU_PASS
+          heroku container:login
+          heroku container:release web
