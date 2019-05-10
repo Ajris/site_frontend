@@ -23,8 +23,7 @@ jobs:
           docker build -t ajris/site:$TAG .
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker push ajris/site:$TAG
-      - run: |
+      - run: git push https://heroku:$HEROKU_PASS@git.heroku.com/ajris.git master
 #          docker login -u $HEROKU_USER -p $HEROKU_PASS registry.heroku.com
 #          docker tag ajris/site:latest registry.heroku.com/ajris/web
 #          docker push registry.heroku.com/ajris/web
-          git push https://heroku:$HEROKU_PASS@git.heroku.com/ajris.git master
