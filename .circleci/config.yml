@@ -8,8 +8,6 @@ jobs:
         - master
     steps:
       - checkout
-#      - run: yarn install
-#      - run: yarn build
       - setup_remote_docker:
           docker_layer_caching: true
       - run:
@@ -26,10 +24,7 @@ jobs:
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker push ajris/site:$TAG
       - run: |
-          docker login -u $HEROKU_USER -p $HEROKU_PASS registry.heroku.com
-          docker tag ajris/site:latest registry.heroku.com/ajris/web
-          docker push registry.heroku.com/ajris/web
-          curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
-          heroku login $HEROKU_USER $HEROKU_PASS
-          heroku container:login
-          heroku container:release web
+#          docker login -u $HEROKU_USER -p $HEROKU_PASS registry.heroku.com
+#          docker tag ajris/site:latest registry.heroku.com/ajris/web
+#          docker push registry.heroku.com/ajris/web
+          git push https://heroku:$HEROKU_PASS@git.heroku.com/ajris.git master
