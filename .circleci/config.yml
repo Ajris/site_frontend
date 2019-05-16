@@ -19,13 +19,13 @@ jobs:
   test:
     docker:
       - image: node:slim
-      steps:
-        - checkout
-        - setup_remote_docker:
-            docker_layer_caching: true
-        - run:
-            name: TESTING
-            command: echo "TESTING"
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: TESTING
+          command: echo "TESTING"
 
   deploy_to_docker:
     machine: true
