@@ -32,7 +32,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          TAG = latest
+          TAG=latest
           docker build -t ajris/site:$TAG .
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker push ajris/site:$TAG
