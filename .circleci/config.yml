@@ -3,9 +3,6 @@ jobs:
   build:
     docker:
       - image: node:slim
-    branches:
-      only:
-        - master
     steps:
       - checkout
       - setup_remote_docker:
@@ -22,9 +19,6 @@ jobs:
   test:
     docker:
       - image: node:slim
-      branches:
-        only:
-          - master
       steps:
         - checkout
         - setup_remote_docker:
