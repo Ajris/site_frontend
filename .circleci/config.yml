@@ -26,6 +26,7 @@ jobs:
           command: |
             apt-get update
             apt-get install -y wget
+            apt-get install unzip
             wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip
             unzip sonar-scanner-cli-3.2.0.1227-linux.zip
       - run:
