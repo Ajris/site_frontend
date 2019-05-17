@@ -16,7 +16,7 @@ jobs:
 
   sonar:
     docker:
-      - image: alpine:latest
+      - image: ubuntu:latest
     steps:
       - checkout
       - setup_remote_docker:
