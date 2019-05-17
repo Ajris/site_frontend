@@ -7,7 +7,9 @@
     "react-dom": "^16.8.6",
     "react-scripts": "^3.0.1",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.13.0"
+    "enzyme-adapter-react-16": "^1.13.0",
+    "sonar-js": "^1.1.0",
+    "sonarqube-scanner": "^2.4.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
