@@ -32,7 +32,6 @@ jobs:
       - run:
           name: Upload to SonarCloud
           command: |
-            export SONAR_SCANNER_OPTS="-Xmx2048m"
             ./sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner
             -Dsonar.host.url=https://sonarcloud.io
             -Dsonar.projectKey=Ajris_site
