@@ -14,14 +14,6 @@ jobs:
           name: TESTING
           command: yarn test
 
-#  test:
-#    docker:
-#      - image: node:11-alpine
-#    steps:
-#      - checkout
-#      - setup_remote_docker:
-#          docker_layer_caching: true
-
   deploy_to_docker:
     machine: true
     steps:
@@ -37,9 +29,6 @@ workflows:
   build_test_deploy_to_docker:
     jobs:
       - build
-#      - test:
-#          requires:
-#            - build
       - deploy_to_docker:
           requires:
             - build
