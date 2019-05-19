@@ -40,21 +40,21 @@ class App extends Component {
 
     render() {
         const {width} = this.state;
-        const isMobile = width < 576;
+        const isMobileMode = width < 576;
 
-        if (!isMobile) {
+        if (!isMobileMode) {
             return (
                 <Router>
-                    <Layout className="layout">
+                    <Layout className="layout" style={{height:'100%', position:'relative'}}>
                         <Header>
                             <nav className="navbar navbar-expand-sm bg-dark sticky-top">
-                                <div className="navbar-collapse collapse justify-content-between">
+                                <div className="navbar-collapse collapse justify-content-between py-2">
                                     <ul className="navbar-nav">
-                                        <li className="nav-item">
+                                        <li className="nav-item ml-3" style={{fontSize:25}}>
                                             <Link className="nav-link text-white" to="/">Home</Link>
                                         </li>
                                     </ul>
-                                    <ul className="navbar-nav ml-auto">
+                                    <ul className="navbar-nav ml-auto mr-2">
                                         <li className="nav-item">
                                             <Link className="nav-link text-white" to="/projects">Personal
                                                 Projects</Link>
@@ -75,7 +75,7 @@ class App extends Component {
                             <Route exact path={'/experience'} component={Experience}/>
                             <Route exact path={'/technologies'} component={Technologies}/>
                         </Content>
-                        <Footer>
+                        <Footer style={{bottom:0, width:'100%', height:'80px'}}>
                             <nav className="navbar navbar-expand-sm bg-dark">
                                 <div className="align-items-center mx-auto">
                                     <ul className="navbar-nav">
