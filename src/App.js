@@ -11,7 +11,12 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <nav className="navbar navbar-expand-sm bg-dark">
+                <nav className="navbar navbar-expand-sm bg-dark sticky-top">
+                    <div className="mobile-nav-toggle">
+                        <div className="top-bar"/>
+                        <div className="middle-bar"/>
+                        <div className="bottom-bar"/>
+                    </div>
                     <div className="navbar-collapse collapse justify-content-between">
                         <ul className="navbar-nav">
                             <li className="nav-item">

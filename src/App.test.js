@@ -8,7 +8,5 @@ Enzyme.configure({adapter: new Adapter()});
 describe("search component", () => {
   test("renders", () => {
     expect(2+2).toBe(4);
-    // const wrapper = shallow(<App />);
-    // expect(wrapper.exists()).toBe(true);
   })
 });
