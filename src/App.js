@@ -11,10 +11,11 @@ import linkedin from './assets/linkedin-in-brands.svg'
 import github from './assets/github-brands.svg'
 import youtube from './assets/youtube-brands.svg'
 import twitter from './assets/twitter-square-brands.svg'
+import mail from './assets/envelope-solid.svg'
 
 import {Layout, Icon} from 'antd';
-const {Header, Content, Footer} = Layout;
 
+const {Header, Content, Footer} = Layout;
 
 
 class App extends Component {
@@ -74,30 +75,37 @@ class App extends Component {
                             <Route exact path={'/experience'} component={Experience}/>
                             <Route exact path={'/technologies'} component={Technologies}/>
                         </Content>
-                        <Footer style={{textAlign: 'center'}}>
+                        <Footer>
                             <nav className="navbar navbar-expand-sm bg-dark">
-                                <ul className="navbar-nav">
-                                    <li className="nav-item">
-                                        <Link to='//linkedin.com'>
-                                            <img src={linkedin} alt="LinkedIn" height={30}/>
-                                        </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link to='//github.com'>
-                                            <img src={github} alt="Github" height={30} />
-                                        </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link to='//youtube.com'>
-                                            <img src={youtube} alt="YouTube" height={30}/>
-                                        </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link to='//twitter.com'>
-                                            <img src={twitter} alt="Twitter" height={30}/>
-                                        </Link>
-                                    </li>
-                                </ul>
+                                <div className="align-items-center mx-auto">
+                                    <ul className="navbar-nav">
+                                        <li className="nav-item py-2 px-3">
+                                            <Link to='//linkedin.com'>
+                                                <img src={linkedin} alt="LinkedIn" height={25}/>
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item py-2 px-3">
+                                            <Link to='//github.com'>
+                                                <img src={github} alt="Github" height={25}/>
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item py-2 px-3">
+                                            <Link to='//youtube.com'>
+                                                <img src={youtube} alt="YouTube" height={25}/>
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item py-2 px-3">
+                                            <Link to='//twitter.com'>
+                                                <img src={twitter} alt="Twitter" height={25}/>
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item py-2 px-3">
+                                            <Link to='//twitter.com'>
+                                                <img src={mail} alt="Mail" height={25}/>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
                             </nav>
                         </Footer>
                     </Layout>
