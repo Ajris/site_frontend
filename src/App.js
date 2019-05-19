@@ -66,13 +66,13 @@ class App extends Component {
                 <Router>
                     <nav className="navbar navbar-dark navbar-expand-sm bg-dark sticky-top">
                         <Link className="nav-link text-white" to="/">Home</Link>
-                        <button type="button" className="navbar-toggler" data-toggle="collapse"
-                                data-target="#menuPrincipal" aria-controls="navbarNav" aria-expanded="false"
+                        <button type="button" className="navbar-toggler collapsed" data-toggle="collapse"
+                                data-target=".toggle-content" aria-controls="navbarNav" aria-expanded="false"
                                 aria-label="Toggle navigation ">
                             <span className="navbar-toggler-icon"/>
                         </button>
 
-                        <div className="navbar-collapse collapse" id="menuPrincipal">
+                        <div className="navbar-collapse collapse toggle-content">
                             <ul className="navbar-nav mx-auto">
                                 <li className="nav-item active">
                                     <Link className="nav-link text-white" to="/projects">Personal Projects</Link>
@@ -86,6 +86,11 @@ class App extends Component {
                             </ul>
                         </div>
                     </nav>
+
+                    <Route exact path={'/'} component={Home}/>
+                    <Route exact path={'/projects'} component={Projects}/>
+                    <Route exact path={'/experience'} component={Experience}/>
+                    <Route exact path={'/technologies'} component={Technologies}/>
                 </Router>
             )
         }
