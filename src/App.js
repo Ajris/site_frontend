@@ -8,38 +8,37 @@ import Experience from './components/experience.component'
 import Technologies from './components/technologies.component'
 
 class App extends Component {
-  render() {
-    return (
-        <Router>
-          <div>
-            <nav className="navbar navbar-expand-sm navbar-brand bg-light">
-              <div className="collapse.navbar-collapse">
-                <ul className="navbar-nav">
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/">Home</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/projects">Personal Projects</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/experience">Experience</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/technologies">Technologies</Link>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+    render() {
+        return (
+            <Router>
+                <nav className="navbar navbar-expand-sm bg-dark">
+                    <div className="navbar-collapse collapse justify-content-between">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <Link className="nav-link text-white" to="/">Home</Link>
+                            </li>
+                        </ul>
+                        <ul className="navbar-nav ml-auto">
+                            <li className="nav-item">
+                                <Link className="nav-link text-white" to="/projects">Personal Projects</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link text-white" to="/experience">Experience</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link text-white" to="/technologies">Technologies</Link>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
 
-            <Route exact path={'/'} component={Home}/>
-            <Route exact path={'/projects'} component={Projects}/>
-            <Route exact path={'/experience'} component={Experience}/>
-            <Route exact path={'/technologies'} component={Technologies}/>
-
-          </div>
-        </Router>
-    );
-  }
+                <Route exact path={'/'} component={Home}/>
+                <Route exact path={'/projects'} component={Projects}/>
+                <Route exact path={'/experience'} component={Experience}/>
+                <Route exact path={'/technologies'} component={Technologies}/>
+            </Router>
+        );
+    }
 }
 
 export default App;
