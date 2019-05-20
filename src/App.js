@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import {BrowserRouter as Router, Link, Route} from "react-router-dom";
+import {Route, BrowserRouter as Router} from "react-router-dom";
 import './App.css';
 import Home from './components/Home'
 import Projects from './components/Projects'
@@ -11,7 +11,7 @@ import TopBarComputer from "./components/TopBarComputer";
 import TopBarMobile from "./components/TopBarMobile";
 
 const Layout = require('antd').Layout;
-const {Header, Content} = Layout;
+const Content = Layout;
 
 class App extends Component {
     constructor(props) {
@@ -37,41 +37,20 @@ class App extends Component {
         const {width} = this.state;
         const isMobileMode = width < 576;
 
-        if (!isMobileMode) {
-            return (
-                <Router>
-                    <Layout className="layout">
-                        <TopBarComputer/>
-
-                        <Content>
-                            <Route exact path={'/'} component={Home}/>
-                            <Route exact path={'/projects'} component={Projects}/>
-                            <Route exact path={'/experience'} component={Experience}/>
-                            <Route exact path={'/technologies'} component={Technologies}/>
-                        </Content>
-
-                        <FooterLinks/>
-                    </Layout>
-                </Router>
-            );
-        } else {
-            return (
-                <Router>
-                    <Layout className="layout">
-                        <TopBarMobile/>
-
-                        <Content>
-                            <Route exact path={'/'} component={Home}/>
-                            <Route exact path={'/projects'} component={Projects}/>
-                            <Route exact path={'/experience'} component={Experience}/>
-                            <Route exact path={'/technologies'} component={Technologies}/>
-                        </Content>
-
-                        <FooterLinks/>
-                    </Layout>
-                </Router>
-            )
-        }
+        return (
+            <Router>
+                <Layout className="layout">
+                    {isMobileMode ? <TopBarMobile/> : <TopBarComputer/>}
+                    <Content>
+                        <Route exact path={'/'} component={Home}/>
+                        <Route exact path={'/projects'} component={Projects}/>
+                        <Route exact path={'/experience'} component={Experience}/>
+                        <Route exact path={'/technologies'} component={Technologies}/>
+                    </Content>
+                    <FooterLinks/>
+                </Layout>
+            </Router>
+        );
     }
 }
 
