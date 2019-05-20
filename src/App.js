@@ -41,6 +41,7 @@ class App extends Component {
             <Router>
                 <Layout className="layout">
                     {isMobileMode ? <TopBarMobile/> : <TopBarComputer/>}
+
                     <Content>
                         <Route exact path={'/'} component={Home}/>
                         <Route exact path={'/projects'} component={Projects}/>
