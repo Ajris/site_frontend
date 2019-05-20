@@ -6,6 +6,11 @@ export default class Home extends Component {
         return (
             <div className={'mx-4 my-3'}>
                 <p className={'topic text-center'}>HOME INFORMATION</p>
+                <p className={'topic text-center'}>HOME INFORMATION</p>
+                <p className={'topic text-center'}>HOME INFORMATION</p>
+                <p className={'topic text-center'}>HOME INFORMATION</p>
+                <p className={'topic text-center'}>HOME INFORMATION</p>
+                <p className={'topic text-center'}>HOME INFORMATION</p>
             </div>
         )
     }

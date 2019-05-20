@@ -13,6 +13,8 @@ import TopBarMobile from "./components/TopBarMobile";
 class App extends Component {
     constructor(props) {
         super(props);
+        this.main = React.createRef();
+
         this.state = {
             width: window.innerWidth,
         };
@@ -28,6 +30,10 @@ class App extends Component {
 
     handleWindowSizeChange = () => {
         this.setState({width: window.innerWidth});
+    };
+
+    scrollToBottom = () => {
+        this.scrollIntoView({ behavior: "smooth" });
     };
 
     render() {
