@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import {BrowserRouter as Router} from "react-router-dom";
 import './App.css';
 import Home from './components/Home'
 import Projects from './components/Projects'
@@ -10,11 +9,11 @@ import FooterLinks from "./components/FooterLinks";
 import TopBarComputer from "./components/TopBarComputer";
 import TopBarMobile from "./components/TopBarMobile";
 
+const Element = require('react-scroll').Element;
+
 class App extends Component {
     constructor(props) {
         super(props);
-        this.main = React.createRef();
-
         this.state = {
             width: window.innerWidth,
         };
@@ -32,23 +31,19 @@ class App extends Component {
         this.setState({width: window.innerWidth});
     };
 
-    scrollToBottom = () => {
-        this.scrollIntoView({ behavior: "smooth" });
-    };
-
     render() {
         const {width} = this.state;
         const isMobileMode = width < 576;
 
         return (
-            <Router>
+            <div>
                 {isMobileMode ? <TopBarMobile/> : <TopBarComputer/>}
-                <Home/>
-                <Experience/>
-                <Projects/>
-                <Technologies/>
+                <Element name="home"><Home/></Element>
+                <Element name="experience"><Experience/></Element>
+                <Element name="projects"><Projects/></Element>
+                <Element name="technologies"><Technologies/></Element>
                 <FooterLinks/>
-            </Router>
+            </div>
         );
     }
 }

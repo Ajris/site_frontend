@@ -1,34 +1,36 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
 
-const Layout = require('antd').Layout;
-const Header = Layout;
+const Link = require('react-scroll').Link;
 
 class TopBarComputer extends Component {
     render() {
-        return (<Header>
-            <nav className="navbar navbar-expand-sm bg-dark sticky-top">
+        return (
+            <nav className="navbar navbar-expand-sm bg-dark fixed-top sticky-top">
                 <div className="navbar-collapse collapse justify-content-between py-2">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav mr-auto">
                         <li className="nav-item ml-3" style={{fontSize: 25}}>
-                            <Link className="nav-link text-white" to="/">Home</Link>
+                            <Link className="nav-link text-white" activeClass="active" to="home" spy={true}
+                                  smooth={true} duration={500} offset={-100}>Home</Link>
                         </li>
                     </ul>
 
                     <ul className="navbar-nav ml-auto mr-2">
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/projects">Personal Projects</Link>
+                            <Link className="nav-link text-white" activeClass="active" to="experience" spy={true}
+                                  smooth={true} duration={500} offset={-100}>Experience</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/experience">Experience</Link>
+                            <Link className="nav-link text-white" activeClass="active" to="projects" spy={true}
+                                  smooth={true} duration={500} offset={-100}>Projects</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/technologies">Technologies</Link>
+                            <Link className="nav-link text-white" activeClass="active" to="technologies" spy={true}
+                                  smooth={true} duration={500} offset={-100}>Technologies</Link>
                         </li>
                     </ul>
                 </div>
             </nav>
-        </Header>)
+        )
     }
 }
 
