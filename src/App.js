@@ -44,7 +44,7 @@ class App extends Component {
         if (!isMobileMode) {
             return (
                 <Router>
-                    <Layout className="layout" >
+                    <Layout className="layout">
                         <Header>
                             <nav className="navbar navbar-expand-sm bg-dark sticky-top">
                                 <div className="navbar-collapse collapse justify-content-between py-2">
@@ -81,27 +81,29 @@ class App extends Component {
                                 <div className="align-items-center mx-auto">
                                     <ul className="navbar-nav">
                                         <li className="nav-item py-2 px-3">
-                                            <a target="_blank" href="https://linkedin.com/">
+                                            <a target="_blank"
+                                               href="https://www.linkedin.com/in/hubert-bratek-762120162/">
                                                 <img src={linkedin} alt="LinkedIn" height={25}/>
                                             </a>
                                         </li>
                                         <li className="nav-item py-2 px-3">
-                                            <a target="_blank" href="https://github.com/">
+                                            <a target="_blank" href="https://github.com/Ajris">
                                                 <img src={github} alt="Github" height={25}/>
                                             </a>
                                         </li>
                                         <li className="nav-item py-2 px-3">
-                                            <a target="_blank" href="https://youtube.com/">
+                                            <a target="_blank"
+                                               href="https://www.youtube.com/channel/UCz7j6ER42OyLulY83qn7yRg">
                                                 <img src={youtube} alt="YouTube" height={25}/>
                                             </a>
                                         </li>
                                         <li className="nav-item py-2 px-3">
-                                            <a target="_blank" href="https://twitter.com/">
+                                            <a target="_blank" href="https://twitter.com/Ajris4">
                                                 <img src={twitter} alt="Twitter" height={25}/>
                                             </a>
                                         </li>
                                         <li className="nav-item py-2 px-3">
-                                            <a target="_blank" href="https://gmail.com/">
+                                            <a target="_blank" href="mailto:ajrisit@gmail">
                                                 <img src={mail} alt="Mail" height={25}/>
                                             </a>
                                         </li>
@@ -112,8 +114,6 @@ class App extends Component {
                     </Layout>
                 </Router>
             );
-
-
         } else {
             return (
                 <Router>
@@ -157,27 +157,28 @@ class App extends Component {
                             <div className="align-items-center mx-auto">
                                 <ul className="navbar-nav">
                                     <li className="nav-item py-2 px-3">
-                                        <a target="_blank" href="https://linkedin.com/">
+                                        <a target="_blank" href="https://www.linkedin.com/in/hubert-bratek-762120162/">
                                             <img src={linkedin} alt="LinkedIn" height={25}/>
                                         </a>
                                     </li>
                                     <li className="nav-item py-2 px-3">
-                                        <a target="_blank" href="https://github.com/">
+                                        <a target="_blank" href="https://github.com/Ajris">
                                             <img src={github} alt="Github" height={25}/>
                                         </a>
                                     </li>
                                     <li className="nav-item py-2 px-3">
-                                        <a target="_blank" href="https://youtube.com/">
+                                        <a target="_blank"
+                                           href="https://www.youtube.com/channel/UCz7j6ER42OyLulY83qn7yRg">
                                             <img src={youtube} alt="YouTube" height={25}/>
                                         </a>
                                     </li>
                                     <li className="nav-item py-2 px-3">
-                                        <a target="_blank" href="https://twitter.com/">
+                                        <a target="_blank" href="https://twitter.com/Ajris4">
                                             <img src={twitter} alt="Twitter" height={25}/>
                                         </a>
                                     </li>
                                     <li className="nav-item py-2 px-3">
-                                        <a target="_blank" href="https://gmail.com/">
+                                        <a target="_blank" href="mailto:ajrisit@gmail">
                                             <img src={mail} alt="Mail" height={25}/>
                                         </a>
                                     </li>
