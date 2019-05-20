@@ -4,7 +4,7 @@ export default class Technologies extends Component {
     render() {
         return (
             <div className={'mx-4 my-3'}>
-                <p>Welcome to Technologies Page!!</p>
+                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
             </div>
         )
     }

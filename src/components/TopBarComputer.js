@@ -16,8 +16,7 @@ class TopBarComputer extends Component {
                     </ul>
                     <ul className="navbar-nav ml-auto mr-2">
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/projects">Personal
-                                Projects</Link>
+                            <Link className="nav-link text-white" to="/projects">Personal Projects</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link text-white" to="/experience">Experience</Link>

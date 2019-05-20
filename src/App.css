@@ -7,3 +7,10 @@
 main {
     flex: 1 0 auto;
 }
+
+.topic {
+    font-size: 300%;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+}
