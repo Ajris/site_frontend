@@ -82,29 +82,29 @@ class App extends Component {
                                 <div className="align-items-center mx-auto">
                                     <ul className="navbar-nav">
                                         <li className="nav-item py-2 px-3">
-                                            <a target="_blank" href="https://pl.linkedin.com/">
+                                            <a target="_blank" href="https://linkedin.com/">
                                                 <img src={linkedin} alt="LinkedIn" height={25}/>
                                             </a>
                                         </li>
                                         <li className="nav-item py-2 px-3">
-                                            <Link to='//github.com'>
+                                            <a target="_blank" href="https://github.com/">
                                                 <img src={github} alt="Github" height={25}/>
-                                            </Link>
+                                            </a>
                                         </li>
                                         <li className="nav-item py-2 px-3">
-                                            <Link to='//youtube.com'>
+                                            <a target="_blank" href="https://youtube.com/">
                                                 <img src={youtube} alt="YouTube" height={25}/>
-                                            </Link>
+                                            </a>
                                         </li>
                                         <li className="nav-item py-2 px-3">
-                                            <Link to='//twitter.com'>
+                                            <a target="_blank" href="https://twitter.com/">
                                                 <img src={twitter} alt="Twitter" height={25}/>
-                                            </Link>
+                                            </a>
                                         </li>
                                         <li className="nav-item py-2 px-3">
-                                            <Link to='//twitter.com'>
+                                            <a target="_blank" href="https://gmail.com/">
                                                 <img src={mail} alt="Mail" height={25}/>
-                                            </Link>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
