@@ -7,19 +7,19 @@ import Projects from './components/projects.component'
 import Experience from './components/experience.component'
 import Technologies from './components/technologies.component'
 
-import linkedin from './assets/linkedin-brands.png'
-import github from './assets/github-brands.png'
-import youtube from './assets/youtube-brands.png'
-import twitter from './assets/twitter-brands.png'
-import mail from './assets/mail-brands.png'
+import linkedIn from './assets/icons/linkedin_icon.png'
+import github from './assets/icons/github_icon.png'
+import youtube from './assets/icons/youtube_icon.png'
+import twitter from './assets/icons/twitter_icon.png'
+import mail from './assets/icons/mail_icon.png'
 
 const Layout = require('antd').Layout;
 const {Header, Content, Footer} = Layout;
 
 
 class App extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             width: window.innerWidth,
         };
@@ -82,7 +82,7 @@ class App extends Component {
                                     <ul className="navbar-nav">
                                         <li className="nav-item py-2 px-3">
                                             <a target="_blank" href="https://linkedin.com/">
-                                                <img src={linkedin} alt="LinkedIn" height={25}/>
+                                                <img src={linkedIn} alt="LinkedIn" height={25}/>
                                             </a>
                                         </li>
                                         <li className="nav-item py-2 px-3">
@@ -158,7 +158,7 @@ class App extends Component {
                                 <ul className="navbar-nav">
                                     <li className="nav-item py-2 px-3">
                                         <a target="_blank" href="https://linkedin.com/">
-                                            <img src={linkedin} alt="LinkedIn" height={25}/>
+                                            <img src={linkedIn} alt="LinkedIn" height={25}/>
                                         </a>
                                     </li>
                                     <li className="nav-item py-2 px-3">
