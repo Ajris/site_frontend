@@ -13,8 +13,7 @@ import youtube from './assets/youtube-brands.png'
 import twitter from './assets/twitter-brands.png'
 import mail from './assets/mail-brands.png'
 
-import {Layout, Icon} from 'antd';
-
+const Layout = require('antd').Layout;
 const {Header, Content, Footer} = Layout;
 
 
@@ -45,7 +44,7 @@ class App extends Component {
         if (!isMobileMode) {
             return (
                 <Router>
-                    <Layout className="layout" style={{minHeight: '100%', position:'relative', overflow:'hidden'}}>
+                    <Layout className="layout" >
                         <Header>
                             <nav className="navbar navbar-expand-sm bg-dark sticky-top">
                                 <div className="navbar-collapse collapse justify-content-between py-2">
@@ -70,14 +69,14 @@ class App extends Component {
                             </nav>
                         </Header>
 
-                        <Content className="ant-row-flex ant-row-flex-center ant-row-flex-middle main-page">
+                        <Content>
                             <Route exact path={'/'} component={Home}/>
                             <Route exact path={'/projects'} component={Projects}/>
                             <Route exact path={'/experience'} component={Experience}/>
                             <Route exact path={'/technologies'} component={Technologies}/>
                         </Content>
 
-                        <Footer className="ant-layout-footer">
+                        <Footer>
                             <nav className="navbar navbar-expand-sm bg-dark" style={{width: '100%'}}>
                                 <div className="align-items-center mx-auto">
                                     <ul className="navbar-nav">
@@ -118,7 +117,7 @@ class App extends Component {
         } else {
             return (
                 <Router>
-                    <Layout className="layout" style={{minHeight: '100%', position:'relative', overflow:'hidden', paddingBottom:'80px'}}>
+                    <Layout className="layout">
                         <Header>
                             <nav className="navbar navbar-dark navbar-expand-sm bg-dark sticky-top">
                                 <Link className="nav-link text-white" to="/">Home</Link>
@@ -153,34 +152,34 @@ class App extends Component {
                         <Route exact path={'/technologies'} component={Technologies}/>
                     </Content>
 
-                    <Footer style={{bottom: 0, width: '100%', position: 'absolute'}}>
-                        <nav className="navbar navbar-expand-sm bg-dark">
+                    <Footer>
+                        <nav className="navbar navbar-expand-sm bg-dark" style={{width: '100%'}}>
                             <div className="align-items-center mx-auto">
                                 <ul className="navbar-nav">
-                                    <li className="nav-item py-2 px-2">
-                                        <Link to='//linkedin.com'>
-                                            <img src={linkedin} alt="LinkedIn" height={20}/>
-                                        </Link>
+                                    <li className="nav-item py-2 px-3">
+                                        <a target="_blank" href="https://linkedin.com/">
+                                            <img src={linkedin} alt="LinkedIn" height={25}/>
+                                        </a>
                                     </li>
-                                    <li className="nav-item py-2 px-2">
-                                        <Link to='//github.com'>
-                                            <img src={github} alt="Github" height={20}/>
-                                        </Link>
+                                    <li className="nav-item py-2 px-3">
+                                        <a target="_blank" href="https://github.com/">
+                                            <img src={github} alt="Github" height={25}/>
+                                        </a>
                                     </li>
-                                    <li className="nav-item py-2 px-2">
-                                        <Link to='//youtube.com'>
-                                            <img src={youtube} alt="YouTube" height={20}/>
-                                        </Link>
+                                    <li className="nav-item py-2 px-3">
+                                        <a target="_blank" href="https://youtube.com/">
+                                            <img src={youtube} alt="YouTube" height={25}/>
+                                        </a>
                                     </li>
-                                    <li className="nav-item py-2 px-2">
-                                        <Link to='//twitter.com'>
-                                            <img src={twitter} alt="Twitter" height={20}/>
-                                        </Link>
+                                    <li className="nav-item py-2 px-3">
+                                        <a target="_blank" href="https://twitter.com/">
+                                            <img src={twitter} alt="Twitter" height={25}/>
+                                        </a>
                                     </li>
-                                    <li className="nav-item py-2 px-2">
-                                        <Link to='//twitter.com'>
-                                            <img src={mail} alt="Mail" height={20}/>
-                                        </Link>
+                                    <li className="nav-item py-2 px-3">
+                                        <a target="_blank" href="https://gmail.com/">
+                                            <img src={mail} alt="Mail" height={25}/>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
