@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import './App.css';
-import Home from './components/home.component'
-import Projects from './components/projects.component'
-import Experience from './components/experience.component'
-import Technologies from './components/technologies.component'
+import Home from './components/Home'
+import Projects from './components/Projects'
+import Experience from './components/Experience'
+import Technologies from './components/Technologies'
 
 import linkedIn from './assets/icons/linkedin_icon.png'
 import github from './assets/icons/github_icon.png'
