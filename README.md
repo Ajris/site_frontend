@@ -6,9 +6,6 @@
 ## Hit Count
 [![HitCount](http://hits.dwyl.com/Ajris/site.svg)](http://hits.dwyl.com/Ajris/site)
 
-## Repo
-[![ASD](https://img.shields.io/github/repo-size/Ajris/site.svg)](https://img.shields.io/github/repo-size/Ajris/site.svg)
-
 ## Installation
 
 ### Prerequisites
