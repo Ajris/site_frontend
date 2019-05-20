@@ -44,7 +44,7 @@ class App extends Component {
         if (!isMobileMode) {
             return (
                 <Router>
-                    <Layout className="layout" >
+                    <Layout className="layout">
                         <Header>
                             <nav className="navbar navbar-expand-sm bg-dark sticky-top">
                                 <div className="navbar-collapse collapse justify-content-between py-2">
@@ -112,8 +112,6 @@ class App extends Component {
                     </Layout>
                 </Router>
             );
-
-
         } else {
             return (
                 <Router>
