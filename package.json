@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material/button": "^2.1.1",
+    "async-validator": "^1.11.2",
+    "antd": "^3.18.2",
     "bootstrap": "^4.3.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.0",
@@ -12,9 +15,9 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.1",
+    "react-scroll": "^1.7.11",
     "sonar-js": "^1.1.0",
-    "sonarqube-scanner": "^2.4.0",
-    "react-scroll": "^1.7.11"
+    "sonarqube-scanner": "^2.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

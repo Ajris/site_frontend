@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
-import Home from './components/Home'
-import Projects from './components/Projects'
-import Experience from './components/Experience'
-import Technologies from './components/Technologies'
-import FooterLinks from "./components/FooterLinks";
-import TopBarComputer from "./components/TopBarComputer";
-import TopBarMobile from "./components/TopBarMobile";
+import Home from './components/sections/Home'
+import Projects from './components/sections/Projects'
+import Experience from './components/sections/Experience'
+import Technologies from './components/sections/Technologies'
+import FooterLinks from "./components/footer/FooterLinks";
+import TopBarComputer from "./components/topbar/TopBarComputer";
+import TopBarMobile from "./components/topbar/TopBarMobile";
+
+import Background from "../src/assets/background.jpg"
 
 const Element = require('react-scroll').Element;
 
@@ -36,7 +38,7 @@ class App extends Component {
         const isMobileMode = width < 576;
 
         return (
-            <div>
+            <div style={{backgroundImage: `url(${Background})`}}>
                 {isMobileMode ? <TopBarMobile/> : <TopBarComputer/>}
                 <Element name="Home"><Home/></Element>
                 <Element name="Experience"><Experience/></Element>
