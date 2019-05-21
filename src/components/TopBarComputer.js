@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-
-const Link = require('react-scroll').Link;
+import TopBarElement from "./TopBarElement";
 
 class TopBarComputer extends Component {
     render() {
@@ -9,28 +8,23 @@ class TopBarComputer extends Component {
                 <div className="navbar-collapse collapse justify-content-between py-2">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item ml-3" style={{fontSize: 25}}>
-                            <Link className="nav-link text-white" activeClass="active" to="home" spy={true}
-                                  smooth={true} duration={500} offset={-100}>Home</Link>
+                            <TopBarElement name="Home"/>
                         </li>
                     </ul>
 
                     <ul className="navbar-nav ml-auto mr-2">
                         <li className="nav-item">
-                            <Link className="nav-link text-white" activeClass="active" to="experience" spy={true}
-                                  smooth={true} duration={500} offset={-100}>Experience</Link>
+                            <TopBarElement name="Experience"/>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" activeClass="active" to="projects" spy={true}
-                                  smooth={true} duration={500} offset={-100}>Projects</Link>
+                            <TopBarElement name="Projects"/>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" activeClass="active" to="technologies" spy={true}
-                                  smooth={true} duration={500} offset={-100}>Technologies</Link>
+                            <TopBarElement name="Technologies"/>
                         </li>
                     </ul>
                 </div>
-            </nav>
-        )
+            </nav>)
     }
 }
 

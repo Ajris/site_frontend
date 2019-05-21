@@ -38,10 +38,10 @@ class App extends Component {
         return (
             <div>
                 {isMobileMode ? <TopBarMobile/> : <TopBarComputer/>}
-                <Element name="home"><Home/></Element>
-                <Element name="experience"><Experience/></Element>
-                <Element name="projects"><Projects/></Element>
-                <Element name="technologies"><Technologies/></Element>
+                <Element name="Home"><Home/></Element>
+                <Element name="Experience"><Experience/></Element>
+                <Element name="Projects"><Projects/></Element>
+                <Element name="Technologies"><Technologies/></Element>
                 <FooterLinks/>
             </div>
         );
