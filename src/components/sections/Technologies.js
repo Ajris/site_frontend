@@ -10,6 +10,12 @@ export default class Technologies extends React.Component {
                 <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
                 <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
                 <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
+                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
+                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
+                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
+                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
+                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
+                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
             </div>
         )
     }
