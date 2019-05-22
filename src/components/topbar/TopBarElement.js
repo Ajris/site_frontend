@@ -12,7 +12,7 @@ class TopBarElement extends React.Component {
 
     render() {
         return (
-            <Link className="btn btn-info btn-large" activeClass="active" to={this.state.name} spy={true}
+            <Link className="nav-link" activeClass="active" to={this.state.name} spy={true}
                   smooth={true} duration={500} offset={-70}>{this.state.name}</Link>
         )
     }

@@ -4,9 +4,9 @@ import TopBarElement from "./TopBarElement";
 class TopBarComputer extends React.Component {
     render() {
         return (
-            <nav className="navbar navbar-dark indigo navbar-expand bg-light fixed-top sticky-top">
+            <nav className="navbar navbar-dark indigo navbar-expand bg-dark fixed-top sticky-top">
                 <div className="navbar-brand justify-content-between">
-                    <ul className="navbar-nav ">
+                    <ul className="navbar-nav">
                         <li className="nav-item">
                             <TopBarElement name="Home"/>
                         </li>
