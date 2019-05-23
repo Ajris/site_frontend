@@ -1,8 +1,5 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
 import TopBarElement from "./TopBarElement";
-
-const Layout = require('antd/lib/index').Layout;
 
 class TopBarMobile extends Component {
     render() {
