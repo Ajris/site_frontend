@@ -9,7 +9,7 @@ import FooterLinks from "./components/footer/FooterLinks";
 import TopBarComputer from "./components/topbar/TopBarComputer";
 import TopBarMobile from "./components/topbar/TopBarMobile";
 
-import Background from "../src/assets/background.jpg"
+import Background from "../src/assets/bright-design.jpg"
 
 const Element = require('react-scroll').Element;
 

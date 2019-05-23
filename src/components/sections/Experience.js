@@ -13,10 +13,8 @@ export default class Experience extends React.Component {
                         <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
                         <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
                         <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
-                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
                     </div>
                     <div className="card-deck">
-                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
                         <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
                         <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
                         <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
