@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Login from "../login/Login"
+import {Link} from "react-router-dom";
 
-class TopBarLoginElement extends React.Component{
+class TopBarLoginElement extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -10,13 +9,9 @@ class TopBarLoginElement extends React.Component{
         }
     }
 
-    render(){
-        return(
-            <Router>
-                <Link className="nav-link" to={"./login"}>{this.state.name}</Link>
-                <Route path={"./login"} component={this.state.name}/>
-            </Router>
-
+    render() {
+        return (
+            <Link className="nav-link" to="/login">{this.state.name}</Link>
         )
     }
 }
