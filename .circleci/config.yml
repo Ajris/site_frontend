@@ -25,9 +25,8 @@ jobs:
           name: Install Sonarqube scanner
           command: |
             apt-get update
-            apt-get install -y wget
             apt-get install unzip
-            wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip
+            curl https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip
             unzip sonar-scanner-cli-3.2.0.1227-linux.zip
       - run:
           name: Upload to SonarCloud
@@ -48,10 +47,10 @@ workflows:
   version: 2
   build_test_deploy_to_docker:
     jobs:
-      - build
+#      - build
       - sonar:
-          requires:
-            - build
-      - deploy_to_docker:
-          requires:
-            - build
+#          requires:
+#            - build
+#      - deploy_to_docker:
+#          requires:
+#            - build
