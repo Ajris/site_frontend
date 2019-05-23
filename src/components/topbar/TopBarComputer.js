@@ -1,5 +1,6 @@
 import React from "react";
 import TopBarElement from "./TopBarElement";
+import TopBarLoginElement from "./TopBarLoginElement";
 
 class TopBarComputer extends React.Component {
     render() {
@@ -18,6 +19,9 @@ class TopBarComputer extends React.Component {
                         </li>
                         <li className="nav-item">
                             <TopBarElement name="Technologies"/>
+                        </li>
+                        <li className="nav-item">
+                            <TopBarLoginElement name="Login"/>
                         </li>
                     </ul>
                 </div>
