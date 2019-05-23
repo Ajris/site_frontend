@@ -4,3 +4,16 @@
     padding: 10px;
     width: 50%;
 }
+
+.container {
+    max-width: none;
+    padding: 0;
+}
+
+.card-lines {
+    padding: 20px;
+}
+
+.card-deck {
+    padding-bottom: 20px;
+}
