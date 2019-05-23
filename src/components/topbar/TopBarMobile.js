@@ -1,36 +1,34 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
-
-const Layout = require('antd/lib/index').Layout;
-const Header = Layout;
+import TopBarElement from "./TopBarElement";
 
 class TopBarMobile extends Component {
     render() {
-        return (<Header>
+        return (
             <nav className="navbar navbar-dark bg-dark sticky-top">
-                <Link className="nav-link text-white" to="/">Home</Link>
+                <ul className="navbar-nav">
+                    <TopBarElement name="Home"/>
+                </ul>
                 <button type="button" className="navbar-toggler collapsed" data-toggle="collapse"
                         data-target=".toggle-content" aria-controls="navbarNav" aria-expanded="false"
                         aria-label="Toggle navigation ">
                     <span className="navbar-toggler-icon"/>
                 </button>
 
-                <div className="navbar-collapse collapse toggle-content">
-                    <ul className="navbar-nav mx-auto">
+                <div className="navbar-brand navbar-collapse collapse toggle-content">
+                    <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/projects">Personal
-                                Projects</Link>
+                            <TopBarElement name="Experience"/>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/experience">Experience</Link>
+                            <TopBarElement name="Projects"/>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/technologies">Technologies</Link>
+                            <TopBarElement name="Technologies"/>
                         </li>
                     </ul>
                 </div>
             </nav>
-        </Header>)
+        )
     }
 }
 

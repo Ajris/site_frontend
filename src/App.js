@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import 'bootstrap/dist/js/bootstrap.bundle';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import Home from './components/sections/Home'
