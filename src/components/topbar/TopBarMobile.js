@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import TopBarElement from "./TopBarElement";
+import TopBarLoginElement from "./TopBarLoginElement";
 
 class TopBarMobile extends Component {
     render() {
@@ -24,6 +25,9 @@ class TopBarMobile extends Component {
                         </li>
                         <li className="nav-item">
                             <TopBarElement name="Technologies"/>
+                        </li>
+                        <li className="nav navbar-nav navbar-right">
+                            <TopBarLoginElement name="Login"/>
                         </li>
                     </ul>
                 </div>

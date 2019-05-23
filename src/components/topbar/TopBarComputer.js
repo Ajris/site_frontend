@@ -20,7 +20,7 @@ class TopBarComputer extends React.Component {
                         <li className="nav-item">
                             <TopBarElement name="Technologies"/>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav navbar-nav navbar-right">
                             <TopBarLoginElement name="Login"/>
                         </li>
                     </ul>
