@@ -1,11 +1,16 @@
 import React from "react";
 import TopBarElement from "./TopBarElement";
+import logo from './logo.PNG';
 
 class TopBarComputer extends React.Component {
     render() {
         return (
-            <nav className="navbar navbar-dark indigo navbar-expand bg-dark fixed-top sticky-top">
-                <div className="navbar-brand justify-content-between">
+            <nav className="navbar navbar-dark indigo navbar-expand fixed-top sticky-top"
+                 style={{backgroundColor: '#393E46'}}>
+                <div>
+                    <img src={logo} alt={"logo"} style={{width: '100px', height: '100px'}} className={"mx-auto"}/>
+                </div>
+                <div className="navbar-brand justify-content-between ml-4">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <TopBarElement name="Home"/>
