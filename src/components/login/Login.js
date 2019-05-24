@@ -2,11 +2,13 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Login.css';
 import Background from './bg-01.jpg';
+import TopBar from "../topbar/TopBar";
 
 export default class Login extends React.Component {
    render() {
         return (
             <div style={{backgroundImage:`url(${Background})`}}>
+                <TopBar/>
                 <div className="container-login100">
                     <div className="wrap-login100 ">
 				        <span className="login100-form-title pb-3">
