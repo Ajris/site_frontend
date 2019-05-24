@@ -11,14 +11,14 @@ class TopBarMobile extends Component {
                 </ul>
                 <button type="button" className="navbar-toggler collapsed" data-toggle="collapse"
                         data-target=".toggle-content" aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation ">
+                        aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"/>
                 </button>
 
                 <div className="navbar-brand navbar-collapse collapse toggle-content">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <TopBarElement name="Experience"/>
+                            <TopBarElement name="Experience" />
                         </li>
                         <li className="nav-item">
                             <TopBarElement name="Projects"/>
