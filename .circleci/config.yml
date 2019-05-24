@@ -16,22 +16,15 @@ jobs:
 
   sonar:
     docker:
-      - image: ubuntu:latest
+      - image: ajris/sonar:latest
     steps:
       - checkout
       - setup_remote_docker:
           docker_layer_caching: true
       - run:
-          name: Install Sonarqube scanner
-          command: |
-            apt-get update
-            apt-get install unzip
-            curl https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip
-            unzip sonar-scanner-cli-3.2.0.1227-linux.zip
-      - run:
           name: Upload to SonarCloud
           command: |
-            ./sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=Ajris_site -Dsonar.organization=ajris-github -Dsonar.sources=. -Dsonar.login=$SONAR_LOGIN_KEY
+            ./sonar-scanner-3.3.0.1492-linux/bin/sonar-scanner -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=Ajris_site -Dsonar.organization=ajris-github -Dsonar.sources=. -Dsonar.login=$SONAR_LOGIN_KEY
 
   deploy_to_docker:
     machine: true
@@ -48,7 +41,7 @@ workflows:
   build_test_deploy_to_docker:
     jobs:
 #      - build
-      - sonar:
+      - sonar
 #          requires:
 #            - build
 #      - deploy_to_docker:
