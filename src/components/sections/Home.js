@@ -6,7 +6,7 @@ export default class Home extends React.Component {
     render() {
         return (
             <div>
-                <div className={'px-4 py-3'}>
+               <div className={'px-4 py-3'}>
                     <p className={'topic text-center'}>Home Information</p>
                 </div>
                 <div className="card-lines">
