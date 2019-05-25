@@ -12,7 +12,7 @@ class FooterLinks extends React.Component {
     render() {
         return (
             <Footer>
-                <nav className="navbar navbar-expand-sm bg-dark" style={{width: '100%'}}>
+                <nav className="footer navbar navbar-expand bg-dark">
                     <div className="align-items-center mx-auto">
                         <ul className="navbar-nav">
                             <li className="nav-item py-2 px-3">

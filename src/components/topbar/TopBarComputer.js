@@ -1,6 +1,7 @@
 import React from "react";
 import TopBarElement from "./TopBarElement";
 import logo from './logo.PNG';
+import TopBarLoginElement from "./TopBarLoginElement";
 
 class TopBarComputer extends React.Component {
     render() {
@@ -23,6 +24,13 @@ class TopBarComputer extends React.Component {
                         </li>
                         <li className="nav-item">
                             <TopBarElement name="Technologies"/>
+                        </li>
+                    </ul>
+                </div>
+                <div className="navbar-brand justify-content-between ml-auto">
+                     <ul>
+                        <li className="nav navbar-nav">
+                            <TopBarLoginElement name="Login"/>
                         </li>
                     </ul>
                 </div>
