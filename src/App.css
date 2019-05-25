@@ -13,3 +13,13 @@
     right: 0;
     height: 40px;
 }
+
+.topbarElement{
+    text-decoration:none;
+    color:#8c8e8d;
+}
+
+.topbarElement:hover{
+    text-decoration:none;
+    color: #bfc2c4;
+}

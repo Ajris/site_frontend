@@ -9,16 +9,13 @@ import Technologies from './components/sections/Technologies'
 import FooterLinks from "./components/footer/FooterLinks";
 
 import Background from "../src/assets/background.jpg"
-import TopBar from "./components/topbar/TopBar";
 
 const Element = require('react-scroll').Element;
 
 class App extends Component {
     render() {
-
         return (
             <div style={{backgroundImage: `url(${Background})`}}>
-                <TopBar/>
                 <Element name="Home"><Home/></Element>
                 <Element name="Experience"><Experience/></Element>
                 <Element name="Projects"><Projects/></Element>

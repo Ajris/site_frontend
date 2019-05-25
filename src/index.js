@@ -10,6 +10,7 @@ import TopBar from "./components/topbar/TopBar";
 const routing = (
     <Router>
         <div>
+            <TopBar/>
             <Route exact path="/" component={App}/>
             <Route path="/login" component={Login}/>
         </div>
