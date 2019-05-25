@@ -8,7 +8,6 @@ export default class Login extends React.Component {
    render() {
         return (
             <div style={{backgroundImage:`url(${Background})`}}>
-                <TopBar/>
                 <div className="container-login100">
                     <div className="wrap-login100 ">
 				        <span className="login100-form-title pb-3">
