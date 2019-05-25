@@ -2,7 +2,6 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Login.css';
 import Background from './bg-01.jpg';
-import TopBar from "../topbar/TopBar";
 
 export default class Login extends React.Component {
    render() {
