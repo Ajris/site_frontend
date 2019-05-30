@@ -36,3 +36,8 @@
     text-decoration:none;
     color: #bfc2c4;
 }
+
+.card:hover{
+    opacity: 0.6;
+    filter: alpha(opacity=100);
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from "./Card";
+import {Col, Container, Row} from "react-bootstrap";
 
 export default class Technologies extends React.Component {
     render() {
@@ -8,18 +9,17 @@ export default class Technologies extends React.Component {
                 <div className={'mx-4 mt-3'}>
                     <p className={'topic text-center'}>Technologies</p>
                 </div>
-                <div className="card-lines">
-                    <div className="card-deck">
-                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
-                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
-                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
-                    </div>
-                    <div className="card-deck">
-                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
-                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
-                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
-                    </div>
-                </div>
+                <Container>
+                    <Row>
+                        <Col style={{backgroundColor:'RED'}}>1 of 2</Col>
+                        <Col>2 of 2</Col>
+                    </Row>
+                    <Row>
+                        <Col>1 of 3</Col>
+                        <Col>2 of 3</Col>
+                        <Col>3 of 3</Col>
+                    </Row>
+                </Container>;
             </div>
         )
     }
