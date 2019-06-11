@@ -15,7 +15,7 @@ class TopBarElement extends React.Component {
     render() {
         return (
             <Link className="nav-link " to={this.state.name} style={{cursor: 'pointer'}} spy={true}
-                  smooth={true} duration={500} offset={-70}>
+                  smooth={true} duration={500} offset={-100}>
                 <RouterLink className="topbarElement" to="/">{this.state.name}</RouterLink>
             </Link>
         )
