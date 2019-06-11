@@ -5,6 +5,19 @@
     width: 50%;
 }
 
+.container {
+    max-width: none;
+    padding: 0;
+}
+
+.card-lines {
+    padding: 20px;
+}
+
+.card-deck {
+    padding-bottom: 20px;
+}
+
 .footer {
     width: 100%;
     position: fixed;
@@ -12,4 +25,19 @@
     left: 0;
     right: 0;
     height: 40px;
+}
+
+.topbarElement{
+    text-decoration:none;
+    color:#8c8e8d;
+}
+
+.topbarElement:hover{
+    text-decoration:none;
+    color: #bfc2c4;
+}
+
+.card:hover{
+    opacity: 0.6;
+    filter: alpha(opacity=100);
 }

@@ -4,7 +4,7 @@ import './Login.css';
 import Background from './bg-01.jpg';
 
 export default class Login extends React.Component {
-    render() {
+   render() {
         return (
             <div style={{backgroundImage:`url(${Background})`}}>
                 <div className="container-login100">

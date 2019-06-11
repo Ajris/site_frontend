@@ -8,13 +8,12 @@ import Experience from './components/sections/Experience'
 import Technologies from './components/sections/Technologies'
 import FooterLinks from "./components/footer/FooterLinks";
 
-import Background from "../src/assets/background.jpg"
+import Background from "../src/assets/bright-design.jpg"
 
 const Element = require('react-scroll').Element;
 
 class App extends Component {
     render() {
-
         return (
             <div style={{backgroundImage: `url(${Background})`}}>
                 <Element name="Home"><Home/></Element>

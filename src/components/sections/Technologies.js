@@ -1,21 +1,25 @@
 import React from 'react';
+import Card from "./Card";
 
 export default class Technologies extends React.Component {
     render() {
         return (
-            <div className={'px-4 pt-3 pb-5'}>
-                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
-                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
-                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
-                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
-                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
-                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
-                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
-                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
-                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
-                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
-                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
-                <p className={'topic text-center'}>TECHNOLOGIES INFORMATION</p>
+            <div className={'mb-3'}>
+                <div className={'mx-4 mt-3'}>
+                    <p className={'topic text-center'}>Technologies</p>
+                </div>
+                <div className="card-lines">
+                    <div className="card-deck">
+                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
+                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
+                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
+                    </div>
+                    <div className="card-deck">
+                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
+                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
+                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
+                    </div>
+                </div>
             </div>
         )
     }

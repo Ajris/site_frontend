@@ -1,10 +1,25 @@
 import React from 'react';
+import Card from "./Card";
 
 export default class Experience extends React.Component {
     render() {
         return (
-            <div className={'px-4 py-3'}>
-                <p className={'topic text-center'}>EXPERIENCE INFORMATION</p>
+            <div>
+                <div className={'mx-4 my-3'}>
+                    <p className={'topic text-center'}>Experience</p>
+                </div>
+                <div className="card-lines">
+                    <div className="card-deck">
+                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
+                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
+                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
+                    </div>
+                    <div className="card-deck">
+                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
+                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
+                        <Card title="HOME 1" text="TEXT 1" footer="footer 1"/>
+                    </div>
+                </div>
             </div>
         )
     }
