@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from "./Card";
-import {Col, Container, Row} from "react-bootstrap";
 
 export default class Technologies extends React.Component {
     render() {
