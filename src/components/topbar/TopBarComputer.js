@@ -10,7 +10,7 @@ class TopBarComputer extends React.Component {
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Navbar.Brand href="/">
                     <div>
-                        <img src={logo} alt={"logo"} style={{width: '80px', height: '80px'}} className={"mx-auto"}/>
+                        <img src={logo} alt={"logo"} style={{width: '40px', height: '40px'}} className={"mx-auto"}/>
                     </div>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
