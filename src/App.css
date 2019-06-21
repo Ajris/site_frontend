@@ -35,7 +35,7 @@
 .top-bar-element {
     text-decoration: underline;
     display: inline-block;
-    color: white;
+    color: #413ebd;
     text-decoration-color: transparent;
     transition: 0.5s;
     -webkit-text-decoration-color: transparent;
