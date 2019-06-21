@@ -7,7 +7,7 @@ import {Nav, Navbar} from "react-bootstrap";
 class TopBarComputer extends React.Component {
     render() {
         return (
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky='top'>
                 <Navbar.Brand href="/">
                     <div>
                         <img src={logo} alt={"logo"} style={{width: '40px', height: '40px'}} className={"mx-auto"}/>
