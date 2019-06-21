@@ -27,17 +27,24 @@
     height: 40px;
 }
 
-.topbarElement{
-    text-decoration:none;
-    color:#8c8e8d;
-}
-
-.topbarElement:hover{
-    text-decoration:none;
-    color: #bfc2c4;
-}
-
-.card:hover{
+.card:hover {
     opacity: 0.6;
     filter: alpha(opacity=100);
+}
+
+.top-bar-element {
+    text-decoration: underline;
+    display: inline-block;
+    color: white;
+    text-decoration-color: transparent;
+    transition: 0.5s;
+    -webkit-text-decoration-color: transparent;
+    -moz-text-decoration-color: transparent;
+}
+
+.top-bar-element:hover {
+    text-decoration-color: red;
+    -webkit-text-decoration-color: red;
+    -moz-text-decoration-color: red;
+    color: #4286f4;
 }
