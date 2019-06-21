@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import {NavItem} from "react-bootstrap";
 
 class TopBarLoginElement extends React.Component {
     constructor(props) {
@@ -11,7 +12,9 @@ class TopBarLoginElement extends React.Component {
 
     render() {
         return (
-            <Link className="nav-link" to="/login">{this.state.name}</Link>
+            <NavItem>
+                <Link className="nav-link top-bar-element" to="/login">{this.state.name}</Link>
+            </NavItem>
         )
     }
 }
