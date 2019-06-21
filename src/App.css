@@ -48,3 +48,9 @@
     -moz-text-decoration-color: red;
     color: #4286f4;
 }
+
+.home-slide-carousel {
+    width: 800px;
+    height: 400px;
+    margin-top: 20px;
+}
