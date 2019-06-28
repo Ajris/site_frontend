@@ -50,7 +50,17 @@
 }
 
 .home-slide-carousel {
-    width: 800px;
-    height: 400px;
-    margin-top: 20px;
+    margin-top: 0;
+    height: auto;
+    max-height: 900px;
+}
+
+.home-slide-carousel-item {
+    height: auto;
+    max-height: 900px;
+}
+
+.home-slide-carousel-item .slide-img {
+    width: 100%;
+    height: auto;
 }

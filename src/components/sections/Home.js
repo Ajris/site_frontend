@@ -1,17 +1,33 @@
 import React from 'react';
 import '../../App.css';
 import {Carousel, Col, Container, Row} from "react-bootstrap";
+import Slide from "./Slide";
 
 export default class Home extends React.Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
 
         this.handleSelect = this.handleSelect.bind(this);
 
         this.state = {
             index: 0,
             direction: null,
+            slides: [],
         };
+    }
+
+    componentDidMount() {
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then(res => res.json())
+            .then((result) => {
+                let slides = result.map((item) =>
+                    <Carousel.Item className='home-slide-carousel-item'>
+                        <Slide title={item.name} text={item.email}/>
+                    </Carousel.Item>
+                );
+                this.setState({slides:slides});
+            });
+
     }
 
     handleSelect(selectedIndex, e) {
@@ -27,34 +43,10 @@ export default class Home extends React.Component {
         return (
             <Container>
                 <Row className="justify-content-center">
-                    <Col md="auto">
-                        <Carousel className='home-slide-carousel' activeIndex={index} direction={direction} onSelect={this.handleSelect}>
-                            <Carousel.Item>
-                                <img className="d-block w-100" src={require('../../assets/800x400.jpg')}
-                                     alt="First slide"/>
-                                <Carousel.Caption>
-                                    <h3>First slide label</h3>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img className="d-block w-100" src={require('../../assets/800x400.jpg')}
-                                     alt="Second slide"/>
-                                <Carousel.Caption>
-                                    <h3>Second slide label</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img className="d-block w-100" src={require('../../assets/800x400.jpg')}
-                                     alt="Third slide"/>
-                                <Carousel.Caption>
-                                    <h3>Third slide label</h3>
-                                    <p>
-                                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                                    </p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
+                    <Col>
+                        <Carousel className='home-slide-carousel' activeIndex={index} direction={direction}
+                                  onSelect={this.handleSelect}>
+                            {this.state.slides}
                         </Carousel>
                     </Col>
                 </Row>

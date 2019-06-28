@@ -15,7 +15,7 @@ const Element = require('react-scroll').Element;
 class App extends Component {
     render() {
         return (
-            <div style={{backgroundImage: `url(${Background})`}}>
+            <div className="background" style={{backgroundImage: `url(${Background})`}}>
                 <Element name="Home"><Home/></Element>
                 <Element name="Experience"><Experience/></Element>
                 <Element name="Projects"><Projects/></Element>
