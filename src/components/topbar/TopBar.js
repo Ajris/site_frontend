@@ -16,13 +16,14 @@ export default class TopBar extends React.Component {
                     </div>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mr-auto topBotomBordersOut">
+                <Navbar.Collapse  id="responsive-navbar-nav">
+                    <Nav className="mr-auto container bordersOut">
                         <TopBarElement name={Constants.HOME_NAME_COMPONENT} />
                         <TopBarElement name={Constants.PROJECTS_NAME_COMPONENT}/>
                         <TopBarElement name={Constants.TECHNOLOGIES_NAME_COMPONENT} />
+                        <TopBarElement name={Constants.BLOG_NAME_COMPONENT} />
                     </Nav>
-                    <Nav>
+                    <Nav className="container bordersOut justify-content-end">
                         <TopBarLoginElement name={Constants.LOGIN_NAME_COMPONENT}/>
                     </Nav>
                 </Navbar.Collapse>

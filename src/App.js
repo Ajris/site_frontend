@@ -8,6 +8,7 @@ import Technologies from './components/sections/Technologies'
 import FooterLinks from "./components/footer/FooterLinks";
 
 import Background from "../src/assets/bright-design.jpg"
+import Blog from "./components/sections/Blog";
 
 const Element = require('react-scroll').Element;
 
@@ -18,6 +19,7 @@ class App extends Component {
                 <Element name="About"><About/></Element>
                 <Element name="Projects"><Projects/></Element>
                 <Element name="Technologies"><Technologies/></Element>
+                <Element name="Blog"><Blog/></Element>
                 <FooterLinks/>
             </div>
         );
