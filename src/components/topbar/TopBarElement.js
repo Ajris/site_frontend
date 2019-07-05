@@ -3,6 +3,8 @@ import React from "react";
 import {Link as RouterLink} from "react-router-dom";
 import {NavItem} from "react-bootstrap";
 import * as Constants from "../../constants/Constants";
+import '../../App.css';
+import Container from "react-bootstrap/Container";
 
 const Link = require('react-scroll/modules').Link;
 
@@ -16,12 +18,12 @@ class TopBarElement extends React.Component {
 
     render() {
         return (
-            <NavItem>
-                <Link className="nav-link" to={this.state.name} style={{cursor: 'pointer'}} spy={true}
-                      smooth={true} duration={500} offset={-100}>
+            <Link className="nav-link" to={this.state.name} spy={true}
+                  smooth={true} duration={500} offset={-100}>
+                <NavItem>
                     <RouterLink className="top-bar-element" to={Constants.HOME_URL}>{this.state.name}</RouterLink>
-                </Link>
-            </NavItem>
+                </NavItem>
+            </Link>
         )
     }
 }

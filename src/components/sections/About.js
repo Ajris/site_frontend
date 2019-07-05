@@ -3,7 +3,7 @@ import '../../App.css';
 import {Carousel, Col, Container, Row} from "react-bootstrap";
 import Slide from "./Slide";
 
-export default class Home extends React.Component {
+export default class About extends React.Component {
     constructor(props) {
         super(props);
 

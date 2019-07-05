@@ -1,5 +1,5 @@
 //Components names
-export const HOME_NAME_COMPONENT = "Home";
+export const HOME_NAME_COMPONENT = "About";
 export const EXPERIENCE_NAME_COMPONENT = "Experience";
 export const PROJECTS_NAME_COMPONENT = "Projects";
 export const TECHNOLOGIES_NAME_COMPONENT = "Technologies";

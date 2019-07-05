@@ -32,23 +32,6 @@
     filter: alpha(opacity=100);
 }
 
-.top-bar-element {
-    text-decoration: underline;
-    display: inline-block;
-    color: #413ebd;
-    text-decoration-color: transparent;
-    transition: 0.5s;
-    -webkit-text-decoration-color: transparent;
-    -moz-text-decoration-color: transparent;
-}
-
-.top-bar-element:hover {
-    text-decoration-color: red;
-    -webkit-text-decoration-color: red;
-    -moz-text-decoration-color: red;
-    color: #4286f4;
-}
-
 .home-slide-carousel {
     margin-top: 0;
     height: auto;
@@ -63,4 +46,45 @@
 .home-slide-carousel-item .slide-img {
     width: 100%;
     height: auto;
+}
+.navbar {
+    padding-top:0;
+    padding-bottom:0;
+}
+
+.nav-link {
+    cursor: pointer;
+    min-width: 100px;
+    padding: 0;
+}
+
+/* Top and Bottom borders go out */
+div.topBotomBordersOut a:before, div.topBotomBordersOut a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersOut a:before
+{
+    top: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after
+{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
 }
