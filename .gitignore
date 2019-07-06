@@ -3,4 +3,3 @@
 /.idea
 # production
 /build
-**/__tests__/__snapshots__/

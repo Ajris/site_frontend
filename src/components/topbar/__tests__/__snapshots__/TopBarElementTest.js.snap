@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBarElement component it matches the snapshot 1`] = `
+<a
+  className="nav-link"
+  onClick={[Function]}
+>
+  <div
+    className="nav-item"
+  />
+</a>
+`;

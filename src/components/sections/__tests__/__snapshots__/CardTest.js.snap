@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemCard component it matches the snapshot 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body"
+  >
+    <div
+      className="card-title h5"
+    />
+    <p
+      className="card-text"
+    />
+  </div>
+  <div
+    className="card-footer"
+  >
+    <small
+      className="text-muted"
+    />
+  </div>
+</div>
+`;

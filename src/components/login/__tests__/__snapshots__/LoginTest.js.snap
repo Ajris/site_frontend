@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login component it matches the snapshot 1`] = `
+<div
+  style={
+    Object {
+      "backgroundImage": "url(bg-01.jpg)",
+    }
+  }
+>
+  <div
+    className="container-login100"
+  >
+    <div
+      className="wrap-login100 "
+    >
+      <span
+        className="login100-form-title pb-3"
+      >
+        Account Login
+      </span>
+      <form
+        className="login100-form"
+      >
+        <div
+          className="wrap-input100"
+        >
+          <input
+            className="input100"
+            name="username"
+            placeholder="User name"
+            type="text"
+          />
+        </div>
+        <div
+          className="wrap-input100"
+        >
+          <input
+            className="input100"
+            name="pass"
+            placeholder="Password"
+            type="password"
+          />
+        </div>
+        <div
+          className="container-login100-form-btn py-2"
+        >
+          <button
+            className="login100-form-btn"
+          >
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
