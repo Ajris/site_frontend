@@ -12,11 +12,12 @@ export default class Projects extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://jsonplaceholder.typicode.com/users")
+        fetch("http://localhost:8080/project")
             .then(res => res.json())
             .then((result) => {
+                let i = 0;
                 let cards = result.map((item) =>
-                    <ItemCard title={item.name} text={item.email} footer={"footer"}/>
+                    <ItemCard key={i++} title={item.name} text={item.email} footer={"footer"}/>
                 );
                 this.setState({cards:cards});
             });

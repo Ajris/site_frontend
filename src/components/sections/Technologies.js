@@ -1,8 +1,8 @@
 import React from 'react';
-import {Col, Container, Image, Row} from "react-bootstrap";
+import {Container, Image, Row} from "react-bootstrap";
 import '../../App.css';
 
-const simplePhoto = require('../../assets/xD.png');
+const simplePhoto = require('../../assets/simpleRhomb.png');
 
 export default class Technologies extends React.Component {
     constructor(props) {
@@ -14,11 +14,12 @@ export default class Technologies extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://jsonplaceholder.typicode.com/posts")
+        fetch("http://localhost:8080/technology")
             .then(res => res.json())
             .then((result) => {
+                let i = 0;
                 let technologies = result.map((item) =>
-                        <Image src={simplePhoto} roundedCircle  style={{margin:'10px'}}/>
+                        <Image key={i++} src={simplePhoto} roundedCircle  style={{margin:'10px'}}/>
                     )
                 ;
                 this.setState({technologies: technologies});
