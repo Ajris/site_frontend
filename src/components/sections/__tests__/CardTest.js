@@ -1,10 +1,10 @@
 import React from "react";
 import { create } from "react-test-renderer";
-import Card from "../Card";
+import ItemCard from "../ItemCard";
 
-describe("Card component", () => {
+describe("ItemCard component", () => {
     test("it matches the snapshot", () => {
-        const component = create(<Card/>);
+        const component = create(<ItemCard/>);
         expect(component.toJSON()).toMatchSnapshot();
     });
 });

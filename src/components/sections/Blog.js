@@ -1,25 +1,37 @@
 import React from 'react';
-import Card from "./Card";
+import CardDeck from "react-bootstrap/CardDeck";
+import ItemCard from "./ItemCard";
 
 export default class Blog extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            cards: [],
+        };
+    }
+
+    componentDidMount() {
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then(res => res.json())
+            .then((result) => {
+                let cards = result.map((item) =>
+                    <ItemCard title={item.name} text={item.email} footer={"footer"}/>
+                );
+                this.setState({cards:cards});
+            });
+
+    }
+
     render() {
         return (
             <div>
                 <div className={'mx-4 my-3'}>
-                    <p className={'topic text-center'}>Projects</p>
+                    <p className={'topic text-center'}>Blog</p>
                 </div>
-                <div className="card-lines">
-                    <div className="card-deck">
-                        <Card title="Project 1" text="TEXT 1" footer="footer 1"/>
-                        <Card title="Project 1" text="TEXT 1" footer="footer 1"/>
-                        <Card title="Project 1" text="TEXT 1" footer="footer 1"/>
-                    </div>
-                    <div className="card-deck">
-                        <Card title="Project 1" text="TEXT 1" footer="footer 1"/>
-                        <Card title="Project 1" text="TEXT 1" footer="footer 1"/>
-                        <Card title="Project 1" text="TEXT 1" footer="footer 1"/>
-                    </div>
-                </div>
+                <CardDeck>
+                    {this.state.cards}
+                </CardDeck>
             </div>
         )
     }
