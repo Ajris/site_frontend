@@ -17,13 +17,13 @@ export default class About extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:8080/about")
+        fetch("http://localhost:8080/project")
             .then(res => res.json())
             .then((result) => {
                 let i = 0;
                 let slides = result.map((item) =>
                     <Carousel.Item key={i++} className='home-slide-carousel-item'>
-                        <Slide title={item.name} text={item.email}/>
+                        <Slide name={item.name}/>
                     </Carousel.Item>
                 );
                 this.setState({slides:slides});
