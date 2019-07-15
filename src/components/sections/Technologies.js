@@ -2,7 +2,7 @@ import React from 'react';
 import {Container, Image, Row} from "react-bootstrap";
 import '../../App.css';
 
-const simplePhoto = require('../../assets/simpleRhomb.png');
+const simplePhoto = require('../../assets/technologies/java.svg');
 
 export default class Technologies extends React.Component {
     constructor(props) {
