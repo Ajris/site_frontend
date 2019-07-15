@@ -21,7 +21,8 @@
     "react-test-renderer": "^16.8.6",
     "shards-react": "^1.0.3",
     "sonar-js": "^1.1.0",
-    "sonarqube-scanner": "^2.4.0"
+    "sonarqube-scanner": "^2.4.0",
+    "lodash": "^4.17.14"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
