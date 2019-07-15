@@ -19,7 +19,7 @@ export default class Technologies extends React.Component {
             .then((result) => {
                 let i = 0;
                 let technologies = result.map((item) =>
-                        <Image key={i++} src={simplePhoto} roundedCircle  style={{margin:'10px'}}/>
+                        <Image key={i++} src={simplePhoto} roundedCircle  style={{margin:'30px', width:'200px'}}/>
                     )
                 ;
                 this.setState({technologies: technologies});

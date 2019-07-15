@@ -19,7 +19,7 @@ class App extends Component {
                 <Element name="About"><About/></Element>
                 <Element name="Projects"><Projects/></Element>
                 <Element name="Technologies"><Technologies/></Element>
-                <Element name="Blog"><Blog/></Element>
+                {/*<Element name="Blog"><Blog/></Element>*/}
                 <FooterLinks/>
             </div>
         );

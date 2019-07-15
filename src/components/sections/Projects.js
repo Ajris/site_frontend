@@ -2,7 +2,9 @@ import React from 'react';
 import CardDeck from "react-bootstrap/CardDeck";
 import ItemCard from "./ItemCard";
 
+
 export default class Projects extends React.Component {
+
     constructor(props) {
         super(props);
 
@@ -17,7 +19,7 @@ export default class Projects extends React.Component {
             .then((result) => {
                 let i = 0;
                 let cards = result.map((item) =>
-                    <ItemCard key={i++} title={item.name} text={item.email} footer={"footer"}/>
+                    <ItemCard key={i++} title={item.name} text={item.description} image={require("../../assets/projects/site.png")} url={item.url}/>
                 );
                 this.setState({cards:cards});
             });

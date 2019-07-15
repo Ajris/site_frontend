@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.2.0",
     "@material/button": "^2.1.1",
     "antd": "^3.18.2",
     "async-validator": "^1.11.2",
