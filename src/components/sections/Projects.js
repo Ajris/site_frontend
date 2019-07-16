@@ -18,14 +18,13 @@ export default class Projects extends React.Component {
             .then(res => res.json())
             .then((result) => {
                 let i = 0;
-                let cards = result.map((item) => {
-                        console.log(item);
-                        return <ItemCard key={i++} title={item.name} text={item.description}
-                                         image={require("../../assets/projects/" + item.name + ".png")} url={item.url}/>
-                    }
+                let cards = result.map((item) =>
+                    <ItemCard key={i++} title={item.name} text={item.description}
+                              image={require("../../assets/projects/" + item.name + ".png")} url={item.url}/>
                 );
                 this.setState({cards: cards});
-            }).catch(error => console.error(error));
+            });
+
     }
 
     render() {

@@ -2,24 +2,20 @@ import React from "react";
 import {Carousel} from "react-bootstrap";
 import '../../App.css';
 
-const CURRENT_LOGIN = require('../login/bg-01.jpg');
-
 export default class Slide extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: props.title,
-            text: props.text,
+            name:props.name,
         };
     }
 
     render() {
         return (
             <div>
-                <img className="d-block img-fluid slide-img" src={CURRENT_LOGIN} alt={this.state.title}/>
+                <img className="d-block img-fluid slide-img" src={require("../login/bg-01.jpg")} alt={"0"}/>
                 <Carousel.Caption>
-                    <h3>{this.state.title}</h3>
-                    <p>{this.state.text}</p>
+                    <h3>{this.state.name}</h3>
                 </Carousel.Caption>
             </div>
         )
