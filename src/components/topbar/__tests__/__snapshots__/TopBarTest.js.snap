@@ -15,8 +15,8 @@ exports[`TopBar component it matches the snapshot 1`] = `
         src="logo.PNG"
         style={
           Object {
-            "height": "40px",
-            "width": "40px",
+            "height": "50px",
+            "width": "50px",
           }
         }
       />
@@ -82,22 +82,6 @@ exports[`TopBar component it matches the snapshot 1`] = `
           Blog
         </div>
       </a>
-    </div>
-    <div
-      className="container bordersOut justify-content-end navbar-nav"
-      onKeyDown={[Function]}
-    >
-      <div
-        className="nav-item"
-      >
-        <a
-          className="nav-link top-bar-element"
-          href="/login"
-          onClick={[Function]}
-        >
-          Login
-        </a>
-      </div>
     </div>
   </div>
 </nav>
