@@ -1,9 +1,36 @@
 language: node_js
+
 node_js:
   - "stable"
+
+dist: trusty
+
+env:
+  global:
+    - DOCKER_REPO=ajris/site
+    - COMMIT=${TRAVIS_COMMIT::8}
+    - secure: "rMYnxILYI3uixr8QzxGkS/rtsWP8W5eBHE+iWFKNmIynEgyfulADzfno5LJaN9LZFu0/SOEwpKvLgYwAOl5/wleDzKfKCIT5YNqCuuBUdlAFW7+yB3Rne0eHKf1wgn6Oqnb83wbNRMvWOPXtshlcJHM2NxRB8DydLmsMLwX5xOyPKOE8WjNfxN391qzH172tBOi01X0ljntLwmdzLUxSZ3hR4J9Yn4Xk0kMG+Wt8p1qgjuMECy9Cv8BgjVRKZkgiQ12wE+ceMb6g02p0oxgGTMIOwYQ9Ciuo0V8eOFmLKe2gOmLpRP5xzNuRD9Yj3AvaP6b3Ye+XkKFW3pkiyT4VGC1vcn6qZifpoIRxf4CK+37xvvMdaqy6gczR2+2137kovO/vFNequKc2ol0BGZAhG8+TK7N/C4uC7r986hljdsnwsYG5XxVb0qRdN3C0RYpuQX2ae+YjHq/XieiDLM9LTB0KBCigiQ4TkIVKu6le6qApNX5MwCIbO8H+YMUmaIuFJzpbomdgrlcOD6FcEThIbGLDdjZ0nla/5r9FPkYYcitxTA4wZ6MVtyernu0Lz31ycZ8idbNPG0bmiMtgk0P+6P/JdevvbFRlDP0cbo4d3vlDUvx0nuPXguCvcn9HkU+r/gcVqCmuFnZLfevkuyMkCwWEHLNMjPam+4ttlAPR3C0="
+    - secure: "uRHm+GKVe8SHbjsVfLPfsY5D+upX6hStovdZO5W6qS0n/8dYQDlDUR/yciSt231AmRbCy9Q6YhG70dKiCKfoMETdsHC8e/NZ5HEDgh01zGo5M+1z10aAzVW3y8KVEPnrWa8c1zuaYsONesJ47BbGYt229sF8b0hrdyLBOH/vk+zTosHUTzBjwcvolAjK2koIviRevf5VKdvlzTzoe9r9o4QOfJESojBqvbMwRpxq3ZAKM1mLXYi6qcSp69coMX45HX/EKpFVNZG6SBkaObEvnG+kllMkDG1kEtwqzLE94isqOhRD/Uj8L118eX/o052hcEMq20M7048md6vMuUSjM3fqvEqF2cu3FTGIllyzOov3qmO64tJhz3mNdn8gh5uLGL7pqP/1g/pMw4E9mSlbh6iOcN2GdNOpZJ/DiAhTkJD0a97H063zuo7RTBqmv+mERKIHkb/J0fx2dnn3SzmsqjHpeWGfvXPekRG5feu4li20/xHWhulLGFoCrSBnYggrI4VAz2pI+6y8+2NzJ3Y87DsYfoI0H6j8E6mg7carlhL5EBgYPCdqoo15bQmPVJ1VeQBf9T8RJFA4bmqQiFHsnpx4n1hx98z+6QD1etTlPCuj+lVgHm6GK973hiksP1u3HEhy+Zm5uVJNdKZSmNGWbhQk3cIUdve6ZTFSfaqNTs4="
+
 cache:
   directories:
     - node_modules
+
+addons:
+  sonarcloud:
+    organization: "ajris-github"
+    token:
+      secure: "HOHTThskd6WpvHm4fhcb/jNd/bJp/m5Y+1eKs5yU9gZjqFhDn8xVD3iLt2FWu0i4+gzFLezLL4XWvBtG6iPa8oP3K7sdBITQloMJG4VbCInqz6A2JyAalORiCalyip0/9bDrrISL3531tcEmw70MoQqixrup4UL1uhrjW2HeCtdUuXYsWciMOAUKE9Ifg7NGJLBJu8CN+4GXPwP02D8fBeD4VhFNwQxYvN2vpBSUSyYoDl4Vpt5vEJ+p4Mk8BAr3jA07VQlatKr29n+u1idL6Wt168namyUtMl037by4sbJbuAVGpjamPW3U+fzCAJG6+jZSjp+sIbuVb7fYFBbZBCeCqIeCDiBaLe2zFvI0BsoX9mvugp3qUHLVIvhVJWkt3uD96N42k1NOIe7icz2Z5H20m8lT9Q91ky13x4cTevWL+FK7PMKfj6CCBXt2qF0zmeGoD89DNluEQ2K1VK+iWe5spkoNxb4uDgHGATK3Lu789aRUoHIM3MXamzOnt/B7etiXj9d44cXmiAls1p2pvpzlyJXvdane55r1O7pmBXFo3XCJ8Mltn+7DVjfBhlpWBTA5K+NiPaZ+gf5D2kKRwWFg/4yZGrdv0gNV0mtvYwArNcv6NdXu5oj/c9Pq6nHhHpOwFCosi0bVUzRFwX637coEiG9JjAPNG4neFElp3CU="
+
 script:
   - npm test
   - npm run build
+  - sonar-scanner
+
+after_success:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
+  - docker build -f Dockerfile -t $DOCKER_REPO:$COMMIT .
+  - docker tag $DOCKER_REPO:$COMMIT $DOCKER_REPO:$TAG
+  - docker tag $DOCKER_REPO:$COMMIT $DOCKER_REPO:travis-$TRAVIS_BUILD_NUMBER
+  - docker push $DOCKER_REPO
