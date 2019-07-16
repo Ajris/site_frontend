@@ -16,20 +16,19 @@ export default class About extends React.Component {
         };
     }
 
-    // componentDidMount() {
-    //     fetch("http://localhost:8080/project")
-    //         .then(res => res.json())
-    //         .then((result) => {
-    //             let i = 0;
-    //             let slides = result.map((item) =>
-    //                 <Carousel.Item key={i++} className='home-slide-carousel-item'>
-    //                     <Slide name={item.name}/>
-    //                 </Carousel.Item>
-    //             );
-    //             this.setState({slides:slides});
-    //         });
-    //
-    // }
+    componentDidMount() {
+        fetch("http://localhost:8080/project")
+            .then(res => res.json())
+            .then((result) => {
+                let i = 0;
+                let slides = result.map((item) =>
+                    <Carousel.Item key={i++} className='home-slide-carousel-item'>
+                        <Slide name={item.name}/>
+                    </Carousel.Item>
+                );
+                this.setState({slides:slides});
+            });
+    }
 
     handleSelect(selectedIndex, e) {
         this.setState({
