@@ -14,7 +14,7 @@ export default class Projects extends React.Component {
     }
 
     componentDidMount() {
-        fetch("project")
+        fetch("http://localhost:8080/project")
             .then(res => res.json())
             .then((result) => {
                 let i = 0;
@@ -25,8 +25,7 @@ export default class Projects extends React.Component {
                     }
                 );
                 this.setState({cards: cards});
-            });
-
+            }).catch(error => console.error(error));
     }
 
     render() {
