@@ -13,19 +13,19 @@ export default class Projects extends React.Component {
         };
     }
 
-    // componentDidMount() {
-    //     fetch("http://localhost:8080/project")
-    //         .then(res => res.json())
-    //         .then((result) => {
-    //             let i = 0;
-    //             let cards = result.map((item) =>
-    //                 <ItemCard key={i++} title={item.name} text={item.description}
-    //                           image={require("../../assets/projects/" + item.name + ".png")} url={item.url}/>
-    //             );
-    //             this.setState({cards: cards});
-    //         });
-    //
-    // }
+    componentDidMount() {
+        fetch("http://localhost:8080/project")
+            .then(res => res.json())
+            .then((result) => {
+                let i = 0;
+                let cards = result.map((item) =>
+                    <ItemCard key={i++} title={item.name} text={item.description}
+                              image={require("../../assets/projects/" + item.name + ".png")} url={item.url}/>
+                );
+                this.setState({cards: cards});
+            });
+
+    }
 
     render() {
         return (
