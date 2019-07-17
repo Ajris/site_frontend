@@ -23,40 +23,6 @@ exports[`About component it matches the snapshot 1`] = `
         <div
           className="carousel-inner"
         />
-        <a
-          className="carousel-control-prev"
-          href="#"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="button"
-        >
-          <span
-            aria-hidden="true"
-            className="carousel-control-prev-icon"
-          />
-          <span
-            className="sr-only"
-          >
-            Previous
-          </span>
-        </a>
-        <a
-          className="carousel-control-next"
-          href="#"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="button"
-        >
-          <span
-            aria-hidden="true"
-            className="carousel-control-next-icon"
-          />
-          <span
-            className="sr-only"
-          >
-            Next
-          </span>
-        </a>
       </div>
     </div>
   </div>
