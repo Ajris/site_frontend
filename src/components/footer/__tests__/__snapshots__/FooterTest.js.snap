@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login component it matches the snapshot 1`] = `
+<section
+  className="ant-layout"
+>
+  <nav
+    className="footer navbar navbar-expand bg-dark"
+  >
+    <div
+      className="align-items-center mx-auto"
+    >
+      <ul
+        className="navbar-nav"
+      >
+        <li
+          className="nav-item py-2 px-3"
+        >
+          <a
+            href="https://www.linkedin.com/in/hubert-bratek-762120162/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="LinkedIn"
+              height={25}
+              src="linkedin_icon.png"
+            />
+          </a>
+        </li>
+        <li
+          className="nav-item py-2 px-3"
+        >
+          <a
+            href="https://github.com/Ajris"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Github"
+              height={25}
+              src="github_icon.png"
+            />
+          </a>
+        </li>
+        <li
+          className="nav-item py-2 px-3"
+        >
+          <a
+            href="https://www.youtube.com/channel/UCz7j6ER42OyLulY83qn7yRg"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="YouTube"
+              height={25}
+              src="youtube_icon.png"
+            />
+          </a>
+        </li>
+        <li
+          className="nav-item py-2 px-3"
+        >
+          <a
+            href="https://twitter.com/Ajris4"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Twitter"
+              height={25}
+              src="twitter_icon.png"
+            />
+          </a>
+        </li>
+        <li
+          className="nav-item py-2 px-3"
+        >
+          <a
+            href="mailto:ajrisit@gmail"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Mail"
+              height={25}
+              src="mail_icon.png"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</section>
+`;

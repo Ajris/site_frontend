@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBar component it matches the snapshot 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+>
+  <a
+    className="navbar-brand"
+    href="/"
+  >
+    <div>
+      <img
+        alt="logo"
+        className="mx-auto img-fluid rounded-circle"
+        src="logo.PNG"
+        style={
+          Object {
+            "height": "50px",
+            "width": "50px",
+          }
+        }
+      />
+    </div>
+  </a>
+  <button
+    aria-controls="responsive-navbar-nav"
+    aria-label="Toggle navigation"
+    className="navbar-toggler"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="navbar-toggler-icon"
+    />
+  </button>
+  <div
+    aria-expanded={null}
+    className="navbar-collapse collapse"
+    id="responsive-navbar-nav"
+  >
+    <div
+      className="mr-auto container bordersOut navbar-nav"
+      onKeyDown={[Function]}
+    >
+      <a
+        className="nav-link"
+        onClick={[Function]}
+      >
+        <div
+          className="nav-item"
+        >
+          About
+        </div>
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+      >
+        <div
+          className="nav-item"
+        >
+          Projects
+        </div>
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+      >
+        <div
+          className="nav-item"
+        >
+          Technologies
+        </div>
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+      >
+        <div
+          className="nav-item"
+        >
+          Blog
+        </div>
+      </a>
+    </div>
+  </div>
+</nav>
+`;

@@ -1,0 +1,12 @@
+version: '3'
+services:
+  frontend:
+    image: "ajris/site:curr"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+  backend:
+    image: "ajris/site_backend:latest"
+    ports:
+      - "8080:8080"
