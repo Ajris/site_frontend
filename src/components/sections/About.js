@@ -44,7 +44,7 @@ export default class About extends React.Component {
             <Container>
                 <Row className="justify-content-center">
                     <Col>
-                        <Carousel className='home-slide-carousel' activeIndex={index} direction={direction}
+                        <Carousel className='home-slide-carousel' activeIndex={index} direction={direction} controls={false}
                                   onSelect={this.handleSelect}>
                             {this.state.slides}
                         </Carousel>
