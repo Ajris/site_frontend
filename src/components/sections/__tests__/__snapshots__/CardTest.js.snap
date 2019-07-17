@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemCard component it matches the snapshot 1`] = `
+<div
+  className="card"
+>
+  <h5
+    className="card-header"
+  />
+  <img
+    className="card-img-top"
+  />
+  <div
+    className="card-body"
+  >
+    <div
+      className="clearfix hidden-lg-up"
+    >
+      <p
+        className="card-text"
+      />
+    </div>
+  </div>
+  <button
+    className="MuiButtonBase-root MuiButton-root button-card MuiButton-text"
+    disabled={false}
+    onBlur={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label"
+    >
+      See project
+    </span>
+  </button>
+</div>
+`;

@@ -12,17 +12,18 @@ export default class Technologies extends React.Component {
     }
 
     componentDidMount() {
-            fetch("http://localhost:8080/technology")
-                .then(res => res.json())
-                .then((result) => {
-                    let i = 0;
-                    let technologies = result.map((item) =>
-                        <Image key={i++} src={require("../../assets/technologies/"+item.name)} roundedCircle  style={{margin:'30px', height:'130px'}}/>
-                    );
+        fetch("http://localhost:8080/technology")
+            .then(res => res.json())
+            .then((result) => {
+                let i = 0;
+                let technologies = result.map((item) =>
+                    <Image key={i++} src={require("../../assets/technologies/" + item.name)}
+                           style={{margin: '30px', height: '130px'}}/>
+                );
 
-                    this.setState({technologies: technologies});
-                });
-        }
+                this.setState({technologies: technologies});
+            }).catch(error => console.log(error));
+    }
 
     render() {
         return (

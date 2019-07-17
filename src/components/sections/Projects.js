@@ -2,9 +2,7 @@ import React from 'react';
 import CardDeck from "react-bootstrap/CardDeck";
 import ItemCard from "./ItemCard";
 
-
 export default class Projects extends React.Component {
-
     constructor(props) {
         super(props);
 
