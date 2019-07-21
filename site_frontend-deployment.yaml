@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: site_frontend-deployment
+spec:
+  selector:
+    matchLabels:
+      app: site_frontend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: site_frontend
+    spec:
+      containers:
+        - name: site_frontend
+          image: ajris/site_frontend:latest
+          ports:
+            - containerPort: 3000
