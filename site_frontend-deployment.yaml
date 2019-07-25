@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deployment
+  labels:
+    app: frontend
 spec:
   selector:
     matchLabels:
@@ -14,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ajris/site_frontend:pr-kubernetes
+          image: ajris/site_frontend:travis-66
           ports:
             - containerPort: 3000
           imagePullPolicy: Always
