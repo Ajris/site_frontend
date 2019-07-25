@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ajris/site_frontend:latest
+          image: ajris/site_frontend:pr-kubernetes
           ports:
             - containerPort: 3000
+          imagePullPolicy: IfNotPresent

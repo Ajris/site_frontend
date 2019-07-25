@@ -12,7 +12,7 @@ export default class Projects extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://ajris.backend.com:8081/project")
+        fetch("http://ajris.backend.com/project")
             .then(res => res.json())
             .then((result) => {
                 let i = 0;
