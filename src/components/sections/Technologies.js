@@ -12,7 +12,7 @@ export default class Technologies extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:8080/technology")
+        fetch("http://ajris.backend.com:8080/technology")
             .then(res => res.json())
             .then((result) => {
                 let i = 0;

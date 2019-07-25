@@ -17,7 +17,7 @@ export default class About extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:8080/project")
+        fetch("http://ajris.backend.com:8081/project")
             .then(res => res.json())
             .then((result) => {
                 let i = 0;
