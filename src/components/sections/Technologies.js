@@ -1,6 +1,7 @@
 import React from 'react';
 import {Container, Image, Row} from "react-bootstrap";
 import '../../App.css';
+import {getAllTechnologies} from "../../utils/APIUtils";
 
 export default class Technologies extends React.Component {
     constructor(props) {
@@ -12,8 +13,7 @@ export default class Technologies extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://backend-service.default.svc.cluster.local:8081/technology")
-            .then(res => res.json())
+        getAllTechnologies()
             .then((result) => {
                 let i = 0;
                 let technologies = result.map((item) =>
