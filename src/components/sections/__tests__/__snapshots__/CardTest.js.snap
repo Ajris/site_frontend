@@ -40,9 +40,7 @@ exports[`ItemCard component it matches the snapshot 1`] = `
   >
     <span
       className="MuiButton-label"
-    >
-      See project
-    </span>
+    />
   </button>
 </div>
 `;
