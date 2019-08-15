@@ -1,6 +1,7 @@
 import React from 'react';
 import CardDeck from "react-bootstrap/CardDeck";
 import ItemCard from "./ItemCard";
+import {getAllBlogs} from "../../utils/APIUtils";
 
 export default class Blog extends React.Component {
     constructor(props) {
@@ -12,12 +13,11 @@ export default class Blog extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:8080/blog")
-            .then(res => res.json())
+        getAllBlogs()
             .then((result) => {
                 let i = 0;
                 let cards = result.map((item) =>
-                    <ItemCard key={i++} title={item.name} text={item.email} footer={"footer"}/>
+                    <ItemCard key={i++} title={item.title} text={item.shortText} buttonText={"See Blog"} footer={"footer"}/>
                 );
                 this.setState({cards:cards});
             });

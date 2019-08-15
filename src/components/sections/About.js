@@ -23,7 +23,7 @@ export default class About extends React.Component {
                 let i = 0;
                 let slides = result.map((item) =>
                     <Carousel.Item key={i++} className='home-slide-carousel-item'>
-                        <Slide name={item.name} image={getImage(("../assets/projects/" + item.name + ".png"))}/>
+                        <Slide name={item.name} image={getImage(item.name)}/>
                     </Carousel.Item>
                 );
                 this.setState({slides: slides});

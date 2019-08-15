@@ -18,7 +18,7 @@ export default class Projects extends React.Component {
                 let i = 0;
                 let cards = result.map((item) =>
                     <ItemCard key={i++} title={item.name} text={item.description}
-                              image={getImage(("../assets/projects/" + item.name + ".png"))} url={item.url}/>
+                              image={getImage(item.name)} url={item.url} buttonText={"See project"}/>
                 );
                 this.setState({cards: cards});
             });

@@ -12,6 +12,13 @@ const request = (options) => {
         .then(response => response.json());
 };
 
+export function getAllBlogs() {
+    return request({
+        url: API_BASE_URL + "/blog",
+        method: 'GET'
+    });
+}
+
 export function getAllProjects() {
     return request({
         url: API_BASE_URL + "/project",
@@ -26,9 +33,9 @@ export function getAllTechnologies() {
     })
 }
 
-export function getImage(url) {
+export function getImage(itemName) {
     try{
-        return require(`${url}`);
+        return require(`../assets/projects/${itemName}.png`);
     } catch(error){
         return require(`../assets/projects/site_frontend.png`);
     }
