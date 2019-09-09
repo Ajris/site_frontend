@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slide component it matches the snapshot 1`] = `
+<div>
+  <img
+    alt="0"
+    className="d-block w-100 img-fluid slide-img img-fluid"
+  />
+  <div
+    className="carousel-caption"
+  >
+    <h3 />
+  </div>
+</div>
+`;

@@ -1,6 +1,7 @@
 import React from 'react';
 import CardDeck from "react-bootstrap/CardDeck";
 import ItemCard from "./ItemCard";
+import {getAllProjects, getImage} from "../../utils/APIUtils";
 
 export default class Projects extends React.Component {
     constructor(props) {
@@ -12,13 +13,12 @@ export default class Projects extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:8080/project")
-            .then(res => res.json())
+        getAllProjects()
             .then((result) => {
                 let i = 0;
                 let cards = result.map((item) =>
                     <ItemCard key={i++} title={item.name} text={item.description}
-                              image={require("../../assets/projects/" + item.name + ".png")} url={item.url}/>
+                              image={getImage(item.name)} url={item.url} buttonText={"See project"}/>
                 );
                 this.setState({cards: cards});
             });

@@ -2,6 +2,7 @@ import React from 'react';
 import '../../App.css';
 import {Carousel, Col, Container, Row} from "react-bootstrap";
 import Slide from "./Slide";
+import {getAllProjects, getImage} from "../../utils/APIUtils";
 
 export default class About extends React.Component {
     constructor(props) {
@@ -17,16 +18,15 @@ export default class About extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:8080/project")
-            .then(res => res.json())
+        getAllProjects()
             .then((result) => {
                 let i = 0;
                 let slides = result.map((item) =>
                     <Carousel.Item key={i++} className='home-slide-carousel-item'>
-                        <Slide name={item.name} image={require("../../assets/projects/" + item.name + ".png")}/>
+                        <Slide name={item.name} image={getImage(item.name)}/>
                     </Carousel.Item>
                 );
-                this.setState({slides:slides});
+                this.setState({slides: slides});
             });
     }
 
@@ -44,7 +44,8 @@ export default class About extends React.Component {
             <Container>
                 <Row className="justify-content-center">
                     <Col>
-                        <Carousel className='home-slide-carousel' activeIndex={index} direction={direction} controls={false}
+                        <Carousel className='home-slide-carousel' activeIndex={index} direction={direction}
+                                  controls={false}
                                   onSelect={this.handleSelect}>
                             {this.state.slides}
                         </Carousel>

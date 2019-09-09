@@ -18,9 +18,9 @@ export default class TopBar extends React.Component {
                 <Navbar.Collapse  id="responsive-navbar-nav">
                     <Nav className="mr-auto container bordersOut">
                         <TopBarElement name={Constants.HOME_NAME_COMPONENT} />
+                        <TopBarElement name={Constants.BLOG_NAME_COMPONENT} />
                         <TopBarElement name={Constants.PROJECTS_NAME_COMPONENT}/>
                         <TopBarElement name={Constants.TECHNOLOGIES_NAME_COMPONENT} />
-                        <TopBarElement name={Constants.BLOG_NAME_COMPONENT} />
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>)

@@ -59,6 +59,16 @@ exports[`TopBar component it matches the snapshot 1`] = `
         <div
           className="nav-item"
         >
+          Blog
+        </div>
+      </a>
+      <a
+        className="nav-link"
+        onClick={[Function]}
+      >
+        <div
+          className="nav-item"
+        >
           Projects
         </div>
       </a>
@@ -70,16 +80,6 @@ exports[`TopBar component it matches the snapshot 1`] = `
           className="nav-item"
         >
           Technologies
-        </div>
-      </a>
-      <a
-        className="nav-link"
-        onClick={[Function]}
-      >
-        <div
-          className="nav-item"
-        >
-          Blog
         </div>
       </a>
     </div>

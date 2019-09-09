@@ -10,6 +10,7 @@ export default class ItemCard extends React.Component {
             text: props.text,
             image:props.image,
             url:props.url,
+            buttonText: props.buttonText
         };
     }
 
@@ -24,7 +25,7 @@ export default class ItemCard extends React.Component {
                     </div>
 
                 </Card.Body>
-                <Button className={"button-card"} href={this.state.url}>See project</Button>
+                <Button className={"button-card"} href={this.state.url}>{this.state.buttonText}</Button>
             </Card>
         );
     }

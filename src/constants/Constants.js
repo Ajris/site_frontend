@@ -3,9 +3,9 @@ export const HOME_NAME_COMPONENT = "About";
 export const PROJECTS_NAME_COMPONENT = "Projects";
 export const TECHNOLOGIES_NAME_COMPONENT = "Technologies";
 export const BLOG_NAME_COMPONENT = "Blog";
-export const LOGIN_NAME_COMPONENT = "Login";
 
 //Urls
+export const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8080/api';
 export const LOGIN_URL = "/login";
 export const HOME_URL = "/";
 

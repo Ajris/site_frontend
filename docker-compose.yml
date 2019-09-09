@@ -1,12 +1,12 @@
 version: '3'
 services:
   frontend:
-    image: "ajris/site:curr"
+    image: "ajris/site:pr-kubernetes"
     ports:
       - "3000:3000"
     depends_on:
       - backend
   backend:
-    image: "ajris/site_backend:latest"
+    image: "ajris/site_backend:pr-kubernetes"
     ports:
       - "8080:8080"
